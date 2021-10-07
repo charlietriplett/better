@@ -1,0 +1,128 @@
+
+.success-criteria-maker {
+  position: relative;
+  display: grid;
+  grid-column-gap: 2rem;
+
+  @include break($break-mid) {
+    grid-template-columns: minmax(320px, 2fr) 3fr;
+  }
+
+  .checklist-container {
+    position: relative;
+  }
+  .criteria-container {
+    margin-bottom: calc(2rem + 3px);
+  }
+
+  .textarea-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0rem;
+    border-top: 1px solid lighten($color-border-gray,3);
+    z-index: 0;
+    box-shadow: 0 0 5px 1px rgba(#000, .1);
+
+    textarea {
+      height: calc(100vh - 7rem);
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      border: none;
+      border-radius: 0;
+      margin-bottom: 0;
+      color: $color-text;
+    }
+  }
+}
+
+
+.checklist-landmark {
+  padding: 0rem 1rem 0rem 0;
+  margin: 0 0 0 0;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  font-weight: bold;
+}
+
+
+.checklist-link {
+  display: block;
+  position: relative;
+  line-height: 1rem;
+  width: 5rem;
+  background-color: lighten($color-gray-xtra-light, 1);
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+  margin: 0;
+  border-left: 1px solid lighten($color-border-gray,10);
+  text-decoration: none;
+  border-radius: 0 2px 2px 0;
+
+  &:before {
+    content: '';
+    font-size: 12px;
+    color: $color-text;
+    line-height: 3.5rem;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 0rem .125rem transparent;
+    background-size: 80% 80%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%0A%3Csvg height='100px' width='100px' fill='%23888888' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 16' x='0px' y='0px'%3E%3Cpath fill='%23888888' fill-rule='evenodd' d='M667,338 C662.581722,338 659,334.418278 659,330 C659,325.581722 662.581722,322 667,322 C671.418278,322 675,325.581722 675,330 C675,334.418278 671.418278,338 667,338 Z M713,338 C708.581722,338 705,334.418278 705,330 C705,325.581722 708.581722,322 713,322 C717.418278,322 721,325.581722 721,330 C721,334.418278 717.418278,338 713,338 Z M690,338 C685.581722,338 682,334.418278 682,330 C682,325.581722 685.581722,322 690,322 C694.418278,322 698,325.581722 698,330 C698,334.418278 694.418278,338 690,338 Z' transform='translate(-659 -322)'%3E%3C/path%3E%3C/svg%3E");
+    transition: .2s;
+  }
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    z-index: 9;
+    &:before {
+      box-shadow: 0 0 0rem .5rem rgba($color-focus,.2);
+      background-image: url("data:image/svg+xml,%0A%3Csvg height='100px' width='100px' fill='%23000000' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 16' x='0px' y='0px'%3E%3Cpath fill='%23000000' fill-rule='evenodd' d='M667,338 C662.581722,338 659,334.418278 659,330 C659,325.581722 662.581722,322 667,322 C671.418278,322 675,325.581722 675,330 C675,334.418278 671.418278,338 667,338 Z M713,338 C708.581722,338 705,334.418278 705,330 C705,325.581722 708.581722,322 713,322 C717.418278,322 721,325.581722 721,330 C721,334.418278 717.418278,338 713,338 Z M690,338 C685.581722,338 682,334.418278 682,330 C682,325.581722 685.581722,322 690,322 C694.418278,322 698,325.581722 698,330 C698,334.418278 694.418278,338 690,338 Z' transform='translate(-659 -322)'%3E%3C/path%3E%3C/svg%3E");
+
+    }
+  }
+}
+
+//.input-checkbox-item:first-of-type {
+//  .checklist-link {
+//    &:before {
+//      content: 'Info' !important;
+//    }
+//  }
+//}
+
+
+label[for="criteria-area"] {
+  margin: 0;
+  background: #fff;
+  padding: 1.5rem 1rem;
+  line-height: 1rem;
+  box-shadow: 0 0 5px 1px rgba(#000, .0625);
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  z-index: 99;
+}
+
+.textarea-controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 1rem 1rem 1rem 1rem;
+  border-top: 1px solid $color-border-gray;
+  background: #fff;
+  position: sticky;
+  bottom: 0;
+}
+
+

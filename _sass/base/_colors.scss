@@ -1,0 +1,31 @@
+$color-brand-primary: #e20074; //Magenta
+$color-brand-primary: #212121;
+
+$color-text: #323234;
+
+$color-brand-secondary: #222;
+$color-gray-xtra-light: #f9f9f9;
+$color-gray-light: #cecece;
+$color-gray: silver;
+$color-gray-xtra-dark: #323234;
+$color-gray-dark: #676767;
+$color-border-gray: #ccc;
+$color-focus: #6692F0;
+$color-focus: $color-brand-primary;
+
+$color-example: #eef;
+
+$color-gold: #ffcc33;
+$color-green: #76D671;
+$color-green-dark: #078A14;
+
+$color-alert: $color-gold;
+
+
+// WCAG 2.2 specifies states should meet min contrast requirements
+$color-button-primary: $color-brand-primary;
+$color-button-hover: darken($color-button-primary,5);
+$color-button-focus: darken($color-button-primary,5);
+$color-button-active: lighten($color-button-primary,5);
+
+// Reset Styles

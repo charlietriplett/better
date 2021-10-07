@@ -1,0 +1,123 @@
+<nav id="nav" class="site-menu" aria-label="Site menu">
+  <ul class="audience">
+    <li>
+      <a class="home"
+        {% if page.url== "/" %} aria-current="page" {% endif %}
+        href="{{ site.baseurl }}/">{{ site.title }}
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/web/" %} aria-current="page" {% endif %}
+        {% if page.url contains "web" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/wireless/">Wireless
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/business/">Business
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/business/">Prepaid
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/tv/">TV
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/banking/">Banking
+      </a>
+    </li>    
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/home-internet/">Internet
+      </a>
+    </li>        
+  </ul>
+  <ul class="primary">
+    <li>
+      <a
+        {% if page.url== "/web/" %} aria-current="page" {% endif %}
+        {% if page.url contains "web" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/wireless/">Plans
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/business/">Phones &amp; Devices
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/business/">Deals
+      </a>
+    </li>
+    <li>
+      <a
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/tv/">Coverage
+      </a>
+    </li>
+  </ul>
+
+  <ul class="secondary">
+    <li>
+      <a class="illustrated find-a-store"
+        {% if page.url== "/web/" %} aria-current="page" {% endif %}
+        {% if page.url contains "web" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/wireless/">
+        <span>Find a store</span>
+      </a>
+    </li>
+    <li>
+      <a class="illustrated contact"
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/business/">
+        <span>Contact</span>
+      </a>
+    </li>
+    <li>
+      <a class="illustrated cart"
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/business/">
+        <span>Cart</span>
+      </a>
+    </li>
+    <li>
+      <a class="illustrated search"
+        {% if page.url== "/native/" %} aria-current="page" {% endif %}
+        {% if page.url contains "native" %} class="current" {% endif %}
+        href="{{ site.baseurl }}/tv/">
+        <span>Search</span>
+      </a>
+    </li>
+    <li>
+      <button class="sign-in">
+        My Account
+      </button>
+    </li>
+  </ul>
+
+</nav>

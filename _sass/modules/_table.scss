@@ -1,0 +1,111 @@
+table {
+  table-layout: auto;
+  margin: 0 0 2rem 0;
+  padding:0;
+  background: none;
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-image: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  text-align: left;
+  thead {
+    border-bottom: 3px solid #000;
+
+    &:first-of-type {
+      [scope='row'] {
+        border-top: none;
+      }
+
+    }
+  }
+
+  th {
+    @include headline;
+    border-top: 1px solid $color-border-gray;
+    margin: 0;
+    padding: .6rem 1rem .4rem 1px;
+    vertical-align: top;
+    font-weight: bold;
+    &:first-of-type {
+      width: 8rem !important;
+    }
+
+    &[scope='row'] {
+      border-top: 1px solid $color-border-gray;
+      font-weight: bold;
+    }
+
+    &[scope='col'] {
+      border-top: none;
+      font-weight: bold;
+    }
+  }
+
+  td {
+    padding: .6rem 1rem .4rem 1px;
+    border-top: 1px solid $color-border-gray;
+    strong {
+      display: inline-block;
+      padding: 0px 7px;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-weight: normal;
+      background-color: #fff;
+    }
+  }
+  caption {
+    font-weight: bold;
+    text-align: left;
+    padding: .5rem 0;
+  }
+  p {
+    padding: 0;
+  }
+
+  &.comparison {
+    position: relative;
+    text-align: center;
+    tr {
+      @include break(0,$break-small) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    thead {
+      @include break(0,$break-small) {
+        position: sticky;
+        top: -1px;
+        background: #fff;
+        margin: 0;
+        box-shadow: 0 10px 10px -10px rgba(#000, .25);
+      }
+      th:first-of-type {
+        @include break(0,$break-small) {
+          @include hidden;
+        }
+      }
+    }
+    th:first-of-type {
+      width: auto !important;
+      @include break(0,$break-small) {
+        border-top: 2px solid #000;
+      }
+
+    }
+
+    [scope=row] {
+      @include break(0,$break-small) {
+        display: block;
+        width: auto !important;
+        grid-column: 1/-1;
+        font-size: 1.25rem;
+      }
+    }
+
+  }
+}

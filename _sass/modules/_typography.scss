@@ -1,0 +1,236 @@
+.wf-loading a,
+.wf-loading .h-alpha,
+.wf-loading .h-bravo,
+.wf-loading p,
+.wf-loading cite {
+  font-family: "droid-sans", Arial;
+  visibility: hidden;
+}
+.wf-active {
+  visibility: visible;
+}
+
+@font-face {
+  font-family: 'teleneo';
+  src: url('#{$baseUrl}/assets/fonts/teleneo-regular.woff2') format('truetype');
+}
+
+@font-face {
+  font-family: 'teleneo-bold';
+  src: url('#{$baseUrl}/assets/fonts/teleneo-bold.woff2') format('truetype');
+}
+
+@font-face {
+  font-family: 'teleneo-medium';
+  src: url('#{$baseUrl}/assets/fonts/teleneo-medium.woff2') format('truetype');
+}
+
+@font-face {
+  font-family: 'teleneo-xtra-bold';
+  src: url('#{$baseUrl}/assets/fonts/teleneo-bold.woff2') format('truetype');
+}
+
+@font-face {
+  font-family: 'teleneo-xtra-bold';
+  src: url('#{$baseUrl}/assets/fonts/teleneo-extrabold.woff2') format('truetype');
+}
+
+
+
+$sans:      "teleneo-medium";
+$sans-bold: "teleneo-bold";
+$serif:     "monospace";
+$display:   "teleneo-xtra-bold";
+
+
+@mixin light {
+  font-family: $sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin light-italic {
+  font-family: $sans, sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+@mixin regular {
+  font-family: $sans, sans-serif;
+}
+@mixin italic {
+  font-family: $sans, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin medium {
+  font-family: $sans-bold, sans-serif;
+  font-weight: 500;
+  font-style: bold;
+}
+
+@mixin bold {
+  font-family: $sans-bold, sans-serif;
+}
+@mixin bold-italic {
+  font-family: $sans-bold, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+//@mixin black {
+//  font-family: $serif, sans-serif;
+//  font-weight: 800;
+//}
+@mixin headline {
+  font-family: $display, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin sans {
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body,
+html {
+  font-family: $sans, sans-serif;
+  color: $color-text;
+  @include regular;
+
+}
+.h-alpha,
+.post-content h1 {
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  @include headline;
+  @include break($break-small) {
+    font-size: clamp(2rem, 3vw, 4rem);
+  }
+}
+.h-bravo,
+.post-content h2 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  @include bold;
+}
+
+.post-content h2 {
+  @include bold;
+  margin: 2rem 0 1rem 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.h-charlie,
+.post-content h3 {
+  font-size: 1.25rem;
+  margin: 0rem 0 1rem 0;
+  @include headline;
+}
+
+.post-content h3 {
+  margin: 1rem 0 1rem 0;
+}
+
+
+
+.h-delta {
+  font-size: 1.25rem;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  @include medium;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    @include focus;
+  }
+}
+
+
+p {
+  font-size: 1rem;
+  @include regular;
+  line-height: 1.625rem;
+  padding: 0 0 1rem 0;
+  margin: 0;
+
+}
+
+.post-content {
+  a {
+    color: $color-text;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+strong {
+  @include bold;
+}
+
+label {
+  @include headline;
+
+}
+
+
+blockquote {
+  margin: 0;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+
+ul {
+  padding: 0;
+  margin-bottom: 2rem;
+  li {
+    margin: 0 0 0 1rem;
+    padding: .5rem 0;
+    list-style-type: square;
+    ul {
+      margin-bottom: inherit;
+    }
+  }
+}
+
+
+ol {
+  padding: 0;
+  margin-bottom: 2rem;
+  li {
+    margin: 0 0 0 1rem;
+    padding: .5rem 0;
+    ul {
+      margin-bottom: inherit;
+    }
+  }
+}
+
+.legal {
+  font-size: 14px;
+  color: $color-gray-dark;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
