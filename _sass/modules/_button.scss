@@ -10,7 +10,7 @@ button {
   font-size: 1rem;
   font-weight: bold;
   @include bold;
-  border-radius: 2px;
+  border-radius: 0px;
   color: #fff;
   transition: text-indent .7s;
   cursor: pointer;

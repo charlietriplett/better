@@ -148,8 +148,7 @@ html {
 
 a {
   text-decoration: underline;
-  border-radius: 2px;
-
+ 
   &:hover {
     text-decoration: none;
   }
@@ -158,6 +157,14 @@ a {
   }
 }
 
+.post-content {
+  a {
+    color: $color-text;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 
 p {
   font-size: 1rem;
@@ -168,12 +175,14 @@ p {
 
 }
 
-.post-content {
+
+h1, 
+h2, 
+h3, 
+h4 {
   a {
-    color: $color-text;
-    &:hover {
-      text-decoration: none;
-    }
+    text-decoration: none;
+    display: inline-block;
   }
 }
 

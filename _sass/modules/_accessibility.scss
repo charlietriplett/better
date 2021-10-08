@@ -6,6 +6,7 @@
   text-align: center;
   &:focus-within {
     @extend .visible;
+    padding: .5rem;
   }
   a {
     display: inline-block;

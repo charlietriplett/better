@@ -1,0 +1,16 @@
+.tile {
+  padding: 1rem;
+  background-color: #fff;
+  @include break($break-large) {
+    padding: 2rem;
+  }
+
+  h2, h3, h4 {
+    a {
+      display: inline-block;
+    }
+    span {
+      display: block;
+    }
+  }
+}

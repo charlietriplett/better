@@ -1,11 +1,14 @@
-<nav id="nav" class="site-menu" aria-label="Site menu">
-  <ul class="audience">
-    <li>
-      <a class="home"
+<nav id="nav" class="site-menu" aria-label="Site menu" e>
+  
+  <a class="home"
         {% if page.url== "/" %} aria-current="page" {% endif %}
-        href="{{ site.baseurl }}/">{{ site.title }}
-      </a>
-    </li>
+        href="{{ site.baseurl }}/">T <span class="hidden">{{ site.title }}</span>
+    </a>
+  <button class="site-menu-toggle">
+    <span class="hidden">Menu</span>
+  </button>
+
+  <ul class="audience">
     <li>
       <a
         {% if page.url== "/web/" %} aria-current="page" {% endif %}
@@ -49,6 +52,7 @@
       </a>
     </li>        
   </ul>
+  
   <ul class="primary">
     <li>
       <a
@@ -105,19 +109,20 @@
         <span>Cart</span>
       </a>
     </li>
-    <li>
-      <a class="illustrated search"
-        {% if page.url== "/native/" %} aria-current="page" {% endif %}
-        {% if page.url contains "native" %} class="current" {% endif %}
-        href="{{ site.baseurl }}/tv/">
-        <span>Search</span>
-      </a>
-    </li>
-    <li>
-      <button class="sign-in">
-        My Account
-      </button>
-    </li>
   </ul>
+
+  <div class="search-container">
+    <a class="illustrated search"
+      {% if page.url== "/native/" %} aria-current="page" {% endif %}
+      {% if page.url contains "native" %} class="current" {% endif %}
+      href="{{ site.baseurl }}/tv/">
+      <span>Search</span>
+    </a>
+  </div>
+  <div class="sign-in-container">
+    <button class="sign-in">
+      My Account
+    </button>
+  </div>
 
 </nav>
