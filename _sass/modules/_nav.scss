@@ -13,7 +13,7 @@ nav {
       "logo search search sign-in site-menu-toggle";
 
     @include break($break-mid) {
-      grid-template-columns: 4rem auto max-content 4rem;
+      grid-template-columns: 4rem 1fr max-content 4rem;
       grid-template-areas: 
         "logo search sign-in site-menu-toggle"
         "primary primary primary primary";
@@ -139,6 +139,7 @@ nav {
     @include break($break-large) {
       display: flex;
       padding-top: 1rem;
+      padding-right: 1rem;
       justify-content: right;
     }
   }

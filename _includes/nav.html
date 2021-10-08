@@ -1,9 +1,10 @@
 <nav id="nav" class="site-menu" aria-label="Site menu" e>
   
   <a class="home"
-        {% if page.url== "/" %} aria-current="page" {% endif %}
-        href="{{ site.baseurl }}/">T <span class="hidden">{{ site.title }}</span>
-    </a>
+    {% if page.url== "/" %} aria-current="page" {% endif %}
+    href="{{ site.baseurl }}/">T <span class="hidden">{{ site.title }}</span>
+  </a>
+
   <button class="site-menu-toggle">
     <span class="hidden">Menu</span>
   </button>
@@ -112,13 +113,9 @@
   </ul>
 
   <div class="search-container">
-    <a class="illustrated search"
-      {% if page.url== "/native/" %} aria-current="page" {% endif %}
-      {% if page.url contains "native" %} class="current" {% endif %}
-      href="{{ site.baseurl }}/tv/">
-      <span>Search</span>
-    </a>
+    {% include examples/input-search.html %}
   </div>
+
   <div class="sign-in-container">
     <button class="sign-in">
       My Account
