@@ -1,0 +1,93 @@
+---
+layout: default
+---
+<article>
+  <div class="container">
+    <h1 class="h-alpha">
+      {{ page.title | escape }}
+    </h1>
+    <div class="container group-1-4">
+      
+      <div>
+        <nav aria-label="Device categories">
+          <h2 class="h-bravo">
+            Devices
+          </h2>
+          <ul class="nav-list">
+            <li>
+              <a href="#">Phones</a>
+            </li>
+            <li>
+              <a href="#">Tablets &amp; devices</a>
+            </li>
+            <li>
+              <a href="#">Smart watches</a>
+            </li>
+            <li>
+              <a aria-label="Hotspot & Internet of Things" href="#">Hotspot &amp; IoT</a>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  Accessories
+                </summary>
+                <ul>
+                  <li>
+                    <a href="#">All accessories</a>
+                  </li>
+                  <li>
+                    <a href="#">Cases &amp; covers</a>
+                  </li>
+                  <li>
+                    <a href="#">Chargers &amp; adapters</a>
+                  </li>
+                  <li>
+                    <a href="#">And so on</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+
+
+        <nav aria-label="Filter devices">
+          <h2 class="h-bravo">
+            Filter
+          </h2>
+          
+          <details>
+            <summary>
+              Deals
+            </summary>
+              <input type="checkbox" id="alphaCheckbox">
+              <label for="alphaCheckbox">Alpha</label>
+
+              <input type="checkbox" id="bravoCheckbox">
+              <label for="bravoCheckbox">Bravo</label>
+
+              <input type="checkbox" id="charlieCheckbox" checked>
+              <label for="charlieCheckbox">Charlie</label>
+          </details>
+        </nav>           
+      </div>
+      <div>
+        <h2 class="h-bravo">Phones</h2>P
+        <ul>
+          {% for page in site.products %}
+          <li><a href="{{ site.baseurl }}{{ page.url }}"> {{ page.title}}</a> </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+
+
+    
+
+
+
+    
+  </div>
+</article>
+

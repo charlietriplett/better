@@ -1,0 +1,56 @@
+.plans {
+  display: grid;
+
+  @include break($break-large) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .price {
+    font-size: 3rem;
+    display: block;
+  }
+
+  .increment {
+    font-size: 1rem;
+  }
+
+  .plan {
+    @include break($break-large) {
+      padding: 2rem;
+    }
+    &.magenta {
+      @include break($break-large) {
+        margin-top: -2rem;
+        padding-top: 4rem;
+
+      }
+      z-index: 99;
+      box-shadow: 0 0 7px 1px rgba(#000, .2);
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      display: grid;
+
+      li {
+        list-style-type: none;
+        margin: 0;
+        padding: 1rem 0;
+        border-top: 1px solid $color-border-gray;
+        height: 4rem;
+        width: 100%;
+        display: flex;
+        display: flex;
+        align-items: center;
+
+      }
+    }
+
+    .plan-header {
+      @include break($break-mid) {
+        height: 16rem;
+      }
+
+    }
+  }
+}

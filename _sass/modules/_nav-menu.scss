@@ -1,0 +1,227 @@
+// good use case for named grids
+
+nav {
+  display: grid;
+  position: relative;
+  
+  &.site-menu {
+    padding-bottom: 1rem;
+    margin: 0 -1rem 2rem -1rem;
+    grid-template-columns: 4rem 1fr 4rem;
+    grid-column-gap: .5rem;
+    grid-template-areas: 
+      "logo sign-in site-menu-toggle";
+
+    @include break($break-small) {
+      border-bottom: 2px solid $color-brand-primary;
+      grid-template-columns: 4rem 1fr max-content 4rem;
+      grid-template-areas: 
+        "logo search sign-in site-menu-toggle"
+        "primary primary primary primary";
+    }
+
+    @include break($break-mid) {
+      grid-column-gap: 0;
+      grid-template-columns: 4rem 1fr max-content 4rem;
+      grid-template-areas: 
+        "logo search sign-in site-menu-toggle"
+        "primary primary primary primary";
+    }
+    
+    @include break($break-large) {
+      margin: 0 0 2rem 0;
+      grid-template-columns: 4rem auto max-content max-content;
+      grid-template-areas: 
+        "logo audience audience sign-in"
+        "primary primary  secondary search";
+    }
+
+    @include break($break-max) {
+      grid-template-columns: 4rem auto auto max-content;
+      grid-template-areas: 
+        "logo audience audience sign-in"
+        "primary primary secondary search";
+    }
+    ul {
+      display: flex;
+      justify-content: left;
+      position: relative;
+      padding: 0;
+      margin: 0rem auto 0 auto;
+      width: 100%;
+
+      li {
+        list-style: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  a.illustrated {
+      position: relative;
+      padding-right: 3rem;
+
+      span {
+        @include break($break-large, $break-max) {
+          @include hidden;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: auto;
+        right: 0rem;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid $color-brand-primary;
+      }
+      
+      @include break($break-max) {
+        span {
+          position: relative;
+          height: auto;
+          width: auto;
+          max-height: 100vh;
+          overflow: auto;
+          clip: auto      ; /* IE6, IE7 */
+          white-space: normal; /* added line */
+        }
+      }
+    }
+
+  .home {
+    background: $color-brand-primary;
+    display: inline-block;
+    color: #fff;
+    width: 4rem;
+    height: 4rem;
+    grid-area: logo;
+  }
+
+  .site-menu-toggle {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    grid-area: site-menu-toggle;
+    @include break($break-large) {
+      display: none;
+    };
+  }
+
+  .search-container {
+    grid-area: search;
+    justify-items: end;
+    display: none;
+    @include break($break-small) {
+      display: grid;
+    }
+    @include break($break-large) {
+      border-top: 2px solid $color-brand-primary;
+      padding-top: 1rem;
+    }
+
+    a.illustrated span {
+      @include hidden;
+      @include break($break-small) {
+        position: relative;
+      }
+    }
+  }
+  .sign-in-container {
+    grid-area: sign-in;
+    display: grid;
+    justify-items: end;
+  }
+  .audience {
+    display: none;
+    grid-area: audience;
+    @include break($break-large) {
+      display: flex;
+    };
+  }
+  
+  .primary {
+    display: none;
+    grid-area: primary;
+    @include break($break-mid) {
+      display: flex;
+    }
+    font-weight: bold;
+    @include break($break-large) {
+    border-top: 2px solid $color-brand-primary;
+      padding-top: 1rem;
+      justify-content: left;
+    }
+    a {
+      font-size: 1.25rem;
+    }
+  }
+  .secondary {
+    border-top: 2px solid $color-brand-primary;
+    display: none;
+    grid-area: secondary;
+
+    @include break($break-large) {
+      display: flex;
+      padding-top: 1rem;
+      padding-right: 1rem;
+      justify-content: right;
+    }
+  }
+
+
+  a,
+  button.expander-toggle {
+    display: block;
+    text-align: center;
+    padding: 1.5rem .5rem 1.5rem .5rem;
+    margin-bottom: -1px;
+    text-decoration: none;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: none;
+    @include regular;
+    @include break($break-mid) {
+      padding: 1.5rem 1rem 1.5rem 1rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -.25rem;
+      left: 0;
+      width: 100%;
+      height: .25rem;
+      // background: $color-brand-primary;
+    }
+    &[aria-current="page"],
+    &.current {
+      @include headline;
+      &:after {
+        content: '';
+        height: .5rem;
+      }
+    }
+    &:hover,
+    &:focus {
+      text-decoration: none ;
+    }
+  }
+
+  button.site-menu-toggle {
+    box-shadow: inset 0 0 0 .25rem $color-brand-primary;
+    background: #fff;
+    @include ripple(#fff, #ccc, 50%, 50%);
+  }
+
+
+  
+  }
+  
+  
+  
+}
+

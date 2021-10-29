@@ -6,10 +6,11 @@ footer {
   margin-bottom: 3rem;
 
   nav {
+    display: flex;
     ul {
-      display: block;
+      display: flex;
       li {
-        display: inline-block;
+        display: block;
       }
     }
     a {

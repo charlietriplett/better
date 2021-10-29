@@ -1,3 +1,17 @@
-.legal {
-  padding: 1rem 0;
+.hero-wrapper {
+  
+  .hero {
+    background-color: darken($color-gray-xtra-light, 6);
+    //background-image: url('/better/assets/images/products/IPhone-13-Pro-Blue-NPI-Hero.webp'); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 2rem 0 2rem 2rem;
+  }
+
+  .legal {
+    border-top: 1px solid lighten($color-border-gray, 5);
+    background-color: darken($color-gray-xtra-light, 3);
+    padding: 1rem 1rem 0rem 2rem;
+    margin-bottom: 2rem;
+  }
 }

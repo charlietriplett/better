@@ -1,0 +1,15 @@
+.product {
+  display: grid;
+
+  @include break($break-large) {
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 2fr;
+  }
+  @include break($break-max) {
+    grid-column-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+
+}

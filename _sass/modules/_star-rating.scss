@@ -1,18 +1,23 @@
+.star-container {
+  a {
+    text-decoration: none;
+  }
+}
+
 .stars {
   display: inline-block;
-  padding: 1rem 1.25rem;
-  background: #fff;
+  padding: 0;
   font-size: 2rem;
+  line-height: 1rem;
   letter-spacing: .25rem;
-  margin-bottom: 3rem;
-  box-shadow: 0 0 5px 1px rgba(#000, .1);
+  margin-bottom: 0rem;
   position: relative;
 
   .scale {
     position: relative;
     display: block;
-    height: 2rem;
-    width: 10rem;
+    height: 1rem;
+    width: 5rem;
     z-index: 0;
     background-image: url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
                       url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
@@ -21,23 +26,23 @@
                       url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='%23cccccc' stroke='%23cccccc' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0 0, 2rem 0px, 4rem 0, 6rem 0, 8rem 0;
+    background-position: 0 0, 1rem 0px, 2rem 0, 3rem 0, 4rem 0;
   }
   .rating {
     position: absolute;
-    top: 1rem;
+    top: 0rem;
     z-index: 1;
     display: block;
-    height: 2rem;
-    width: 8rem;
+    height: 1rem;
+    width: 4rem;
     background-repeat: no-repeat;
     background-image: url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+                      url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
+                      url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
+                      url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E"),
+                      url("data:image/svg+xml,%3Csvg height='16px' width='16px' fill='black' stroke='black' stroke-width='6' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 100 100' version='1.1' x='0px' y='0px'%3E%3Cg fill-rule='evenodd'%3E%3Cpolygon points='50 75.846128 25.1872654 89.258398 29.926076 60.8507543 9.85215201 40.7323494 37.5936327 36.58773 50 10.741602 62.4063673 36.58773 90.147848 40.7323494 70.073924 60.8507543 74.8127346 89.258398'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
     background-size: contain;
-    background-position: 0 0, 2rem 0px, 4rem 0, 6rem 0, 8rem 0;
+    background-position: 0 0, 1rem 0px, 2rem 0, 3rem 0, 4rem 0;
   }
 }
 

@@ -5,13 +5,18 @@ main {
 
 .container {
   display: block;
-  max-width: $break-max;
+  max-width: $max-width;
   margin: 0 auto;
-  padding-right: $gutter/2;
-  padding-left: $gutter/2;
+  padding-right: 1rem;
+  padding-left: 1rem;
 
   &.narrow {
     max-width: $break-small;
+  }
+
+  @include break($break-small) {
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -103,6 +108,14 @@ main {
   }
 }
 
+.group-1-4 {
+  display: grid;
+  @include break($break-mid) {
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 2rem;
+  }
+}
+
 .lowlight {
   background: rgba(#000, .5);
   padding: 2rem;
@@ -125,5 +138,11 @@ main {
     border: none;
 
   }
+
+}
+
+.flex {
+  display: flex;
+    justify-content: space-between;
 
 }

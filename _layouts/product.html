@@ -1,0 +1,98 @@
+---
+layout: default
+---
+<article>
+  <div class="container">
+    <h1 class="h-alpha">
+      {{ page.title | escape }}
+    </h1>
+  </div>
+  <div class="container product">
+    <div>
+      {% include examples/carousel.html %}
+    </div>
+    <div>
+      <div class="star-container card">
+        <a class="" href="#reviews">
+          {% include examples/stars.html %}
+          <span class="hidden">
+            Rating:
+          </span>
+          4.2
+          <span class="hidden">
+            stars
+          </span>
+          | Reviews
+        </a>
+      </div>
+      <fieldset>
+        <legend>
+          Memory
+        </legend>
+        {% for variation in page.variations %}
+          <input type="radio" 
+                name="memory" 
+                id="memory-{{ variation.memory }}"
+                data-colors="{{ variation.colors }}">
+          <label for="memory-{{ variation.memory }}">{{ variation.memory }}</label>
+        {% endfor %}
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Color
+        </legend>
+        {% assign uniqueColors = page.colors | split: ", " %}
+        {% for color in uniqueColors %}
+          <input type="radio" name="color" id="color-{{ color }}">
+          <label for="color-{{ color }}" data-available="color-{{variation.memory}}">{{ color }}</label>
+        {% endfor %}
+      </fieldset>
+
+      <div class="pricing card">
+        <h2 class="eyebrow">
+          Pay in full today
+        </h2>
+        <p class="pricing h-charlie">$799.99 + tax</p>
+        <p>One time SIM card charge applied for new activation or add a line. Qualifying services required.</p>
+      </div>
+      <button>Add to cart</button>
+    </div>  
+  </div>
+
+  <div class="container narrow">
+    <div class="reviews">
+      <h2 id="reviews" tabindex="-1" class="h-bravo">Reviews</h2>
+      <details>
+        <summary>
+          Show Reviews
+        </summary>
+        Reviews go here
+      </details>
+    </div>
+    <div class="specifications">
+      <h2 class="h-bravo">Specs</h2>
+    </div>
+  </div>
+
+  <div class="container product">
+    <ul>
+      {% for variation in page.variations %}
+        <li>{{ variation.memory }}
+          <ul>
+            <li>
+              Colors
+               {% assign colors = variation.colors | split: ", " %}
+                <ul>
+                  {% for color in colors %}
+                    <li>{{ color }}</li>
+                  {% endfor %}
+                </ul>
+            </li>
+            <li>Price: {{ variation.price }}</li>
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

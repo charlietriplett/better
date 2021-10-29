@@ -5,7 +5,7 @@ button {
   position: relative;
   border: none;
   padding: 1.5rem 3rem 1.5rem 2rem;
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
   line-height: 1rem;
   font-size: 1rem;
   font-weight: bold;
@@ -161,6 +161,26 @@ button {
     background: none;
     color: $color-text;
     &:before {
+      display: none;
+    }
+  }
+
+  &.edit {
+    padding: .5rem;
+    background-color: #fff;
+    color: $color-text;
+    @include ripple(#fff, #eee, center, center);
+    &::before {
+      display: none;
+    }
+  }
+  &.remove {
+    padding: .5rem;
+    background-color: #fff;
+    color: $color-red-text;
+    border: 1px solid $color-red;
+    @include ripple(#fff, #eee, center, center);
+    &::before {
       display: none;
     }
   }
