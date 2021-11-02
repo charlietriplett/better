@@ -1,17 +1,33 @@
 .nav-list {
-  margin: 0;
+  margin: 0 0 2rem 0;
   padding: 0;
 
   li {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    border-top: 1px solid $color-border-gray;
+    border-bottom: 1px solid $color-border-gray;
+    &:last-of-type {
+      border-bottom: none;
+    }
   }
 
   a {
     display: block;
     padding: 1rem 0;
-
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+details {
+  .nav-list {
+    li {
+      padding-left: 1rem; 
+      a {
+      }
+    }
   }
 }

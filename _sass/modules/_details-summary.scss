@@ -17,8 +17,6 @@ details {
     position: relative;
     display: block; // necessary to control ::marker
     z-index: 9;
-
-
     @include ripple;
 
     &::-webkit-details-marker,
@@ -88,14 +86,40 @@ details {
     @include ripple;
   }
 
-  &.checklist-details {
-    font-size: auto;
+  &.compact { 
+    border: none !important;
+    box-shadow: none;
     padding: 0;
+    margin-bottom: 0rem;
+
     summary {
       margin: 0;
-      border: none;
+      padding: 1rem 0;
+      font-size: 1rem;
+      font-weight: bold;
     }
+    input[type=checkbox] + label {
+      margin-left: -1rem;
+    }
+
   }
+
+  &.indicator-right {   
+    summary {
+      padding: 1.25rem 4rem 1.25rem 0 !important;
+      &:before {
+      content: '';
+      top: .75rem;
+      left: auto;
+      right: 0rem;
+    }
+    &:after {
+      display: none;
+    }
+    }
+
+  }
+  
 }
 
 
