@@ -26,36 +26,32 @@ layout: default
               <li>
                 <a aria-label="Hotspot & Internet of Things" href="#">Hotspot &amp; IoT</a>
               </li>
-              <li>
-                <details>
-                  <summary>
-                    Accessories
-                  </summary>
-                  <ul>
-                    <li>
-                      <a href="#">All accessories</a>
-                    </li>
-                    <li>
-                      <a href="#">Cases &amp; covers</a>
-                    </li>
-                    <li>
-                      <a href="#">Chargers &amp; adapters</a>
-                    </li>
-                    <li>
-                      <a href="#">And so on</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
             </ul>
+            <details>
+              <summary>
+                Accessories
+              </summary>
+              <ul>
+                <li>
+                  <a href="#">All accessories</a>
+                </li>
+                <li>
+                  <a href="#">Cases &amp; covers</a>
+                </li>
+                <li>
+                  <a href="#">Chargers &amp; adapters</a>
+                </li>
+                <li>
+                  <a href="#">And so on</a>
+                </li>
+              </ul>
+            </details>
           </nav>
-
 
           <nav aria-label="Filter devices">
             <h2 class="h-bravo">
               Filter
-            </h2>
-            
+            </h2>           
             <details>
               <summary>
                 Deals
@@ -77,19 +73,17 @@ layout: default
       <div class="card">
         <h2 class="h-bravo">Phones</h2>
         <ul class="products">
-
           {% for i in (1..4) %}
-
             {% for page in site.products %}
-            <li>
+            <li class="products-list-item">
               <button class="tertiary" aria-label="Special offer: Get the iPhone 13 on us, forever">
                 On us, forever, or whatever
               </button>
-              <div>
+              <div class="product-image">
                 Product image goes here
               </div>
                     
-              <h3>
+              <h3 class="product-full-name">
                 <a href="{{ site.baseurl }}{{ page.url }}" aria-describedby="colors pricing">
                   <span class="brand">{{ page.brand }}</span>
                   <span class="h-charlie">{{ page.name }}</span>
@@ -97,14 +91,14 @@ layout: default
               </h3>
 
               {% assign uniqueColors = page.colors | split: ", " %}
-              {% for color in uniqueColors %}
-                <ul id="colors" class="list-colors" aria-label="Available in these colors">
+              <ul id="colors" class="list-colors" aria-label="Available in these colors">
+                {% for color in uniqueColors %}
                   <li>
-                    {{ color }} 
+                    <span class="hidden">{{ color }} </span>
                   </li>
-                </ul>           
-              {% endfor %}
-
+                {% endfor %}
+              </ul>           
+  
               <div class="star-container">
                 {% include examples/stars.html %}
                 <span class="hidden">
