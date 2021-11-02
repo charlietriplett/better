@@ -6,76 +6,130 @@ layout: default
     <h1 class="h-alpha">
       {{ page.title | escape }}
     </h1>
-    <div class="container group-1-4">
-      
+    <div class="group-1-4">
       <div>
-        <nav aria-label="Device categories">
-          <h2 class="h-bravo">
-            Devices
-          </h2>
-          <ul class="nav-list">
-            <li>
-              <a href="#">Phones</a>
-            </li>
-            <li>
-              <a href="#">Tablets &amp; devices</a>
-            </li>
-            <li>
-              <a href="#">Smart watches</a>
-            </li>
-            <li>
-              <a aria-label="Hotspot & Internet of Things" href="#">Hotspot &amp; IoT</a>
-            </li>
-            <li>
-              <details>
-                <summary>
-                  Accessories
-                </summary>
-                <ul>
-                  <li>
-                    <a href="#">All accessories</a>
-                  </li>
-                  <li>
-                    <a href="#">Cases &amp; covers</a>
-                  </li>
-                  <li>
-                    <a href="#">Chargers &amp; adapters</a>
-                  </li>
-                  <li>
-                    <a href="#">And so on</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </nav>
+        <div class="card sticky top">
+          <nav aria-label="Device categories">
+            <h2 class="h-bravo">
+              Devices
+            </h2>
+            <ul class="nav-list">
+              <li>
+                <a href="#">Phones</a>
+              </li>
+              <li>
+                <a href="#">Tablets &amp; devices</a>
+              </li>
+              <li>
+                <a href="#">Smart watches</a>
+              </li>
+              <li>
+                <a aria-label="Hotspot & Internet of Things" href="#">Hotspot &amp; IoT</a>
+              </li>
+              <li>
+                <details>
+                  <summary>
+                    Accessories
+                  </summary>
+                  <ul>
+                    <li>
+                      <a href="#">All accessories</a>
+                    </li>
+                    <li>
+                      <a href="#">Cases &amp; covers</a>
+                    </li>
+                    <li>
+                      <a href="#">Chargers &amp; adapters</a>
+                    </li>
+                    <li>
+                      <a href="#">And so on</a>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </nav>
 
 
-        <nav aria-label="Filter devices">
-          <h2 class="h-bravo">
-            Filter
-          </h2>
-          
-          <details>
-            <summary>
-              Deals
-            </summary>
-              <input type="checkbox" id="alphaCheckbox">
-              <label for="alphaCheckbox">Alpha</label>
+          <nav aria-label="Filter devices">
+            <h2 class="h-bravo">
+              Filter
+            </h2>
+            
+            <details>
+              <summary>
+                Deals
+              </summary>
+                <input type="checkbox" id="alphaCheckbox">
+                <label for="alphaCheckbox">Alpha</label>
 
-              <input type="checkbox" id="bravoCheckbox">
-              <label for="bravoCheckbox">Bravo</label>
+                <input type="checkbox" id="bravoCheckbox">
+                <label for="bravoCheckbox">Bravo</label>
 
-              <input type="checkbox" id="charlieCheckbox" checked>
-              <label for="charlieCheckbox">Charlie</label>
-          </details>
-        </nav>           
+                <input type="checkbox" id="charlieCheckbox" checked>
+                <label for="charlieCheckbox">Charlie</label>
+            </details>
+          </nav>           
+        </div>
       </div>
-      <div>
-        <h2 class="h-bravo">Phones</h2>P
-        <ul>
-          {% for page in site.products %}
-          <li><a href="{{ site.baseurl }}{{ page.url }}"> {{ page.title}}</a> </li>
+      
+
+      <div class="card">
+        <h2 class="h-bravo">Phones</h2>
+        <ul class="products">
+
+          {% for i in (1..4) %}
+
+            {% for page in site.products %}
+            <li>
+              <button class="tertiary" aria-label="Special offer: Get the iPhone 13 on us, forever">
+                On us, forever, or whatever
+              </button>
+              <div>
+                Product image goes here
+              </div>
+                    
+              <h3>
+                <a href="{{ site.baseurl }}{{ page.url }}" aria-describedby="colors pricing">
+                  <span class="brand">{{ page.brand }}</span>
+                  <span class="h-charlie">{{ page.name }}</span>
+                </a>
+              </h3>
+
+              {% assign uniqueColors = page.colors | split: ", " %}
+              {% for color in uniqueColors %}
+                <ul id="colors" class="list-colors" aria-label="Available in these colors">
+                  <li>
+                    {{ color }} 
+                  </li>
+                </ul>           
+              {% endfor %}
+
+              <div class="star-container">
+                {% include examples/stars.html %}
+                <span class="hidden">
+                  Rating:
+                </span>
+                {{ page.rating }}
+                <span class="hidden">
+                  stars
+                </span>
+              </div>
+
+
+              <ul id="pricing">
+                <li class="finance">
+                  <span class="hidden">Finance the {{ page.name }} at</span>
+                  <span class="finance-payment">$26.76/mo</span>
+                  <span class="finance-term">for 30 months</span>
+                  <span class="finance-downpayment">$0 down + tax</span>
+                </li>
+                <li>
+                  Full price: $799.99
+                </li>
+              </ul>
+              </li>
+            {% endfor %}
           {% endfor %}
         </ul>
       </div>

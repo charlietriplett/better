@@ -1,14 +1,14 @@
 ---
 layout: product
-title:  "iPhone 13"
+title:  "Apple iPhone 13 Pro"
 description: "Meta description goes here"
 categories: apple 5g ios
 
 
 brand:  Apple
-name:  iPhone 13
+name:  iPhone 13 Pro
 os:     iOS
-rating: 4.2
+rating: 4.5
 colors: |
   Pink, Starlight, Blue, (Product)Red, Midnight
 variations:
