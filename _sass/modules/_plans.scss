@@ -1,7 +1,8 @@
 .plans {
   display: grid;
 
-  @include break($break-large) {
+
+  @include break($break-max) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 

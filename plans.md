@@ -1,6 +1,6 @@
 ---
 layout: plans
-title: T-Mobile wireless plans
+title: Wireless plans
 permalink: /plans/
 ---
 

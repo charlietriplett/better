@@ -14,7 +14,7 @@ main {
     max-width: $break-small;
   }
 
-  @include break($break-small) {
+  @include break($break-max) {
     padding-right: 2rem;
     padding-left: 2rem;
   }
@@ -111,7 +111,7 @@ main {
 .group-1-4 {
   display: grid;
   @include break($break-mid) {
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(16rem, 1fr) 4fr;
     grid-column-gap: 2rem;
   }
 }
