@@ -11,7 +11,7 @@ details {
     @include headline;
     padding: 1.5rem 1rem 1.5rem 5rem;
     margin: calc(-1rem);
-    line-height: 1;
+    line-height: 1rem;
     font-size: 1.25rem;
     cursor: pointer;
     position: relative;
@@ -27,7 +27,7 @@ details {
       content: '';
       display: block;
       position: absolute;
-      top: 1.125rem;
+      top: 1rem;
       left: 1rem;
       width: 2rem;
       height: 2rem;
@@ -78,11 +78,11 @@ details {
 
   &[open] summary {
     border-bottom: 1px solid $color-gray;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     @include ripple;
     &:before {
       transform: rotate(180deg);
-      background-position: center center;
+      background-position: center 40%;
     }
   }
   
